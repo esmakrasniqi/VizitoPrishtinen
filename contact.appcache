@@ -20,7 +20,7 @@ NETWORK:
 #will be served in place of all files in the /html/ catalog
 # in case an internet connection cannot be established:
 FALLBACK:
-1.html 
+index.html 
 rreth.html
 hotels.html
 events.html
