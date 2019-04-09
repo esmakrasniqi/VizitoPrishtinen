@@ -10,8 +10,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <script >
-function flm() {
-  alert("Faleminderit per kohen tuaj!");
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Ju lutem shkruani emrin");
+    return false;
+  }
 }
 </script>
 <style>
@@ -112,7 +116,11 @@ function flm() {
               <h1>Ndonje sygjerim, kritike apo lavdate?</h1>
               <p><textarea id="output" rows="7" cols="90"></textarea></p>
 
-              <input type="submit" onclick="flm()">
+              <form name="myForm"  onsubmit="return validateForm()" method="post">
+                Emri: <input type="text" name="fname">
+                <br>
+                <input type="submit" value="Submit">
+              </form>
 
 
         </div>
